@@ -21,7 +21,7 @@
 Pertama, clone repositori project ini ke lokal dengan menggunakan perintah berikut:
 
 ```bash
-git clone https://github.com/rifqi-daiva/ppam_tugas1.git
+git clone https://github.com/rifqidaiva/pam_tugas1.git
 cd ppam_tugas1
 ```
 
