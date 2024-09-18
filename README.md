@@ -1,4 +1,4 @@
-# ppam_tugas1
+# pam_tugas1
 
 ## Kelompok 12
 

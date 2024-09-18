@@ -76,7 +76,7 @@ class LoginTitle extends StatelessWidget {
           color: Colors.purple,
         ),
         const Text(
-          "Masuk ke Tugas1.",
+          "Masuk ke Tamkur",
           style: TextStyle(
             fontSize: 32,
             fontWeight: FontWeight.bold,
@@ -94,7 +94,7 @@ class LoginTitle extends StatelessWidget {
           ),
           padding: const EdgeInsets.only(left: 18),
           child: const Text(
-            "Masuk menggunakan NIM asisten praktikum pemrograman aplikasi mobile SI-A.",
+            "Masuk menggunakan data anggota Mahasiswa kelompok 12 pemrograman aplikasi mobile SI-A.",
             style: TextStyle(
               color: Colors.black45,
             ),
@@ -145,7 +145,7 @@ class _LoginFormState extends State<LoginForm> {
             decoration: const InputDecoration(
               fillColor: Colors.amber,
               border: UnderlineInputBorder(),
-              labelText: 'Username',
+              labelText: 'Username (NIM)',
               labelStyle: formLabelStyle,
             ),
           ),
@@ -156,7 +156,7 @@ class _LoginFormState extends State<LoginForm> {
             decoration: const InputDecoration(
               fillColor: Colors.amber,
               border: UnderlineInputBorder(),
-              labelText: 'Password',
+              labelText: 'Password (Nama Depan)',
               labelStyle: formLabelStyle,
             ),
           ),
@@ -168,9 +168,11 @@ class _LoginFormState extends State<LoginForm> {
             onPressed: () {
               // MARK: Logika Login
               switch ([usernameController.text, passwordController.text]) {
-                case ["123210022", "123210022"]:
+                case ["124220128", "aiken"]:
                   break;
-                case ["123210181", "123210181"]:
+                case ["124220131", "rifqi"]:
+                  break;
+                case ["124220132", "dwiki"]:
                   break;
                 default:
                   var snackBar = const SnackBar(
