@@ -12,6 +12,8 @@ Tugas 1 Pemrograman Aplikasi Mobile SI-A.
 | 124220131 | Rifqi Daiva Tri Nandhika |
 | 124220132 | Dwiki Pasa Nandhika      |
 
+![image](https://github.com/user-attachments/assets/0194e1ab-62ff-4d48-8128-b35fe4ceccae)
+
 ## Langkah-langkah
 
 ### 1. Clone Repository
