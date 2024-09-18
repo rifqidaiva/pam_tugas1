@@ -1,16 +1,46 @@
-# pam_tugas1
+# ppam_tugas1
 
-A new Flutter project.
+## Kelompok 12
 
-## Getting Started
+Tugas 1 Pemrograman Aplikasi Mobile SI-A.
 
-This project is a starting point for a Flutter application.
+**Anggota:**
 
-A few resources to get you started if this is your first Flutter project:
+| NIM       | Nama                     |
+| --------- | ------------------------ |
+| 124220128 | Aiken Ahmad Hakeem       |
+| 124220131 | Rifqi Daiva Tri Nandhika |
+| 124220132 | Dwiki Pasa Nandhika      |
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Langkah-langkah
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 1. Clone Repository
+
+Pertama, clone repositori project ini ke lokal dengan menggunakan perintah berikut:
+
+```bash
+git clone https://github.com/rifqi-daiva/ppam_tugas1.git
+cd ppam_tugas1
+```
+
+### 2. Install Dependencies
+
+Setelah masuk ke direktori proyek, jalankan perintah berikut untuk menginstal dependencies yang diperlukan:
+
+```bash
+flutter pub get
+```
+
+### 3. Jalankan Aplikasi di Emulator/Perangkat Fisik
+
+- Pastikan semua emulator sudah berjalan.
+- Jalankan perintah berikut untuk memulai aplikasi:
+
+```bash
+flutter run
+```
+
+### Referensi
+
+- [Dokumentasi Dart](https://dart.dev/guides)
+- [Dokumentasi Flutter](https://docs.flutter.dev/)
