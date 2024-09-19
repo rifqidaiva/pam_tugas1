@@ -42,7 +42,7 @@ class _PageHomeState extends State<PageHome> {
         title: const Text("Selamat Datang"),
       ),
       body: <Widget>[
-        const Text("Beranda"),
+        const PageHomeCredit(),
         const Text("Kalkulator"),
         const Text("Ganjil Genap"),
       ][currentPageIndex],
@@ -50,11 +50,48 @@ class _PageHomeState extends State<PageHome> {
   }
 }
 
-class PageCredit extends StatelessWidget {
-  const PageCredit({super.key});
+class PageHomeCredit extends StatelessWidget {
+  const PageHomeCredit({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    Widget memberCard({required String name, required String id}) {
+      return Card.filled(
+        child: Container(
+          width: double.infinity,
+          padding: const EdgeInsets.all(28),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                name,
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                id,
+                style: const TextStyle(color: Colors.black45),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            memberCard(name: "Aiken Ahmad Hakeem", id: "124220128"),
+            memberCard(name: "Rifqi Daiva Tri Nandhika", id: "124220131"),
+            memberCard(name: "Dwiki Pasa Nandhika", id: "124220132"),
+          ],
+        ),
+      ),
+    );
   }
 }
