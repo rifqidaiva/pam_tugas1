@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: "Pemrograman Aplikasi Mobile - Tugas 1",
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: true,
       home: PageLogin(),
     );
   }
