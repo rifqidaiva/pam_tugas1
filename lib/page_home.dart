@@ -61,7 +61,7 @@ class _PageHomeState extends State<PageHome> {
           IconButton(
             icon: const Icon(Icons.logout),
             onPressed: () {
-              _showLogoutConfirmation(context);
+              konfirmasiLogout(context);
             },
           ),
         ],
@@ -74,7 +74,7 @@ class _PageHomeState extends State<PageHome> {
     );
   }
 
-  void _showLogoutConfirmation(BuildContext context) {
+  void konfirmasiLogout(BuildContext context) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
