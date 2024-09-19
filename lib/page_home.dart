@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pam_tugas1/main.dart';
 import 'package:pam_tugas1/page_calculator.dart';
 import 'package:pam_tugas1/page_oddeven.dart';
 
@@ -41,13 +42,65 @@ class _PageHomeState extends State<PageHome> {
             ),
           ]),
       appBar: AppBar(
-        title: const Text("Selamat Datang"),
+        title: Text(
+          currentPageIndex == 0
+              ? "Selamat Datang"
+              : currentPageIndex == 1
+                  ? "Tambah Kurang"
+                  : "Ganjil Genap",
+        ),
+        leading: IconButton(
+          icon: const Icon(Icons.home),
+          onPressed: () {
+            setState(() {
+              currentPageIndex = 0;
+            });
+          },
+        ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout),
+            onPressed: () {
+              _showLogoutConfirmation(context);
+            },
+          ),
+        ],
       ),
       body: <Widget>[
         const PageHomeCredit(),
         const TamKurPage(),
         const PageOddeven(),
       ][currentPageIndex],
+    );
+  }
+
+  void _showLogoutConfirmation(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Konfirmasi Logout'),
+          content: const Text('Apakah kamu yakin ingin logout?'),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Tutup dialog
+              },
+              child: const Text('Batal'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Tutup dialog
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyApp()),
+                ); // Pindah ke halaman Login
+              },
+              child: const Text('Logout'),
+            ),
+          ],
+        );
+      },
     );
   }
 }
@@ -88,6 +141,12 @@ class PageHomeCredit extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const Text(
+              "Anggota Kelompok 12:",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             memberCard(name: "Aiken Ahmad Hakeem", id: "124220128"),
             memberCard(name: "Rifqi Daiva Tri Nandhika", id: "124220131"),
             memberCard(name: "Dwiki Pasa Nandhika", id: "124220132"),
