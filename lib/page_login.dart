@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'page_content.dart';
+import 'page_home.dart';
 
 class PageLogin extends StatefulWidget {
   const PageLogin({super.key});
@@ -185,8 +185,7 @@ class _LoginFormState extends State<LoginForm> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) =>
-                      PageContent(nim: usernameController.text),
+                  builder: (context) => PageHome(nim: usernameController.text),
                 ),
               );
             },
