@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pam_tugas1/page_oddeven.dart';
 
 class PageHome extends StatefulWidget {
   final String nim;
@@ -44,7 +45,7 @@ class _PageHomeState extends State<PageHome> {
       body: <Widget>[
         const PageHomeCredit(),
         const Text("Kalkulator"),
-        const Text("Ganjil Genap"),
+        const PageOddeven(),
       ][currentPageIndex],
     );
   }
