@@ -1,8 +1,10 @@
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/0194e1ab-62ff-4d48-8128-b35fe4ceccae">
+</p>
+
 # pam_tugas1
 
 ## Kelompok 12
-
-Tugas 1 Pemrograman Aplikasi Mobile SI-A.
 
 **Anggota:**
 
@@ -19,8 +21,8 @@ Tugas 1 Pemrograman Aplikasi Mobile SI-A.
 Pertama, clone repositori project ini ke lokal dengan menggunakan perintah berikut:
 
 ```bash
-git clone https://github.com/rifqi-daiva/ppam_tugas1.git
-cd ppam_tugas1
+git clone https://github.com/rifqidaiva/pam_tugas1.git
+cd pam_tugas1
 ```
 
 ### 2. Install Dependencies
