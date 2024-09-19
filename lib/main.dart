@@ -10,10 +10,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(useMaterial3: true),
       title: "Pemrograman Aplikasi Mobile - Tugas 1",
       debugShowCheckedModeBanner: false,
-      home: PageLogin(),
+      home: const PageLogin(),
     );
   }
 }
