@@ -13,6 +13,7 @@ class PageHome extends StatefulWidget {
 
 class _PageHomeState extends State<PageHome> {
   int currentPageIndex = 0;
+  int previousPageIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +22,7 @@ class _PageHomeState extends State<PageHome> {
           selectedIndex: currentPageIndex,
           onDestinationSelected: (int index) {
             setState(() {
+              previousPageIndex = currentPageIndex;
               currentPageIndex = index;
             });
           },
@@ -66,11 +68,29 @@ class _PageHomeState extends State<PageHome> {
           ),
         ],
       ),
-      body: <Widget>[
-        const PageHomeCredit(),
-        const TamKurPage(),
-        const PageOddeven(),
-      ][currentPageIndex],
+      body: AnimatedSwitcher(
+        duration: const Duration(milliseconds: 300),
+        transitionBuilder: (Widget child, Animation<double> animation) {
+          final offsetAnimation = Tween<Offset>(
+            begin: previousPageIndex < currentPageIndex
+                ? const Offset(1.0, 0.0)
+                : const Offset(-1.0, 0.0),
+            end: const Offset(0.0, 0.0),
+          ).animate(animation);
+
+          return SlideTransition(
+            position: offsetAnimation,
+            child: child,
+          );
+        },
+        switchInCurve: Curves.easeInOut,
+        switchOutCurve: Curves.easeInOut,
+        child: <Widget>[
+          const PageHomeCredit(),
+          const TamKurPage(),
+          const PageOddeven(),
+        ][currentPageIndex],
+      ),
     );
   }
 
