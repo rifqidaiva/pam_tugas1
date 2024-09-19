@@ -22,7 +22,7 @@ Pertama, clone repositori project ini ke lokal dengan menggunakan perintah berik
 
 ```bash
 git clone https://github.com/rifqidaiva/pam_tugas1.git
-cd ppam_tugas1
+cd pam_tugas1
 ```
 
 ### 2. Install Dependencies
