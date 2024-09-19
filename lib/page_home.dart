@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pam_tugas1/page_calculator.dart';
 
 class PageHome extends StatefulWidget {
   final String nim;
@@ -31,7 +32,7 @@ class _PageHomeState extends State<PageHome> {
             NavigationDestination(
               selectedIcon: Icon(Icons.calculate),
               icon: Icon(Icons.calculate_outlined),
-              label: 'Kalkulator',
+              label: 'Tamkur',
             ),
             NavigationDestination(
               icon: Icon(Icons.assignment_add),
@@ -43,7 +44,7 @@ class _PageHomeState extends State<PageHome> {
       ),
       body: <Widget>[
         const Text("Beranda"),
-        const Text("Kalkulator"),
+        TamKurPage(),
         const Text("Ganjil Genap"),
       ][currentPageIndex],
     );
