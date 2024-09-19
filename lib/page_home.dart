@@ -118,16 +118,29 @@ class PageHomeCredit extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                name,
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text(
-                id,
-                style: const TextStyle(color: Colors.black45),
+              Row(
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.only(right: 8.0),
+                    child: Icon(Icons.person),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        name,
+                        style: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        id,
+                        style: const TextStyle(color: Colors.black54),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ],
           ),
@@ -145,6 +158,7 @@ class PageHomeCredit extends StatelessWidget {
               "Anggota Kelompok 12:",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
+                fontSize: 21,
               ),
             ),
             memberCard(name: "Aiken Ahmad Hakeem", id: "124220128"),
