@@ -69,7 +69,13 @@ class _TamKurPageState extends State<TamKurPage> {
                     ),
                   ),
                   onPressed: _add,
-                  child: const Text('Penjumlahan'),
+                  child: const Text(
+                    'Penjumlahan',
+                    style: TextStyle(
+                      color: Color.fromARGB(
+                          255, 0, 0, 0), // Sesuaikan warna teks menjadi amber
+                    ),
+                  ),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -79,7 +85,13 @@ class _TamKurPageState extends State<TamKurPage> {
                     ),
                   ),
                   onPressed: _subtract,
-                  child: const Text('Pengurangan'),
+                  child: const Text(
+                    'Pengurangan',
+                    style: TextStyle(
+                      color: Color.fromARGB(
+                          255, 0, 0, 0), // Sesuaikan warna teks menjadi amber
+                    ),
+                  ),
                 ),
               ],
             ),

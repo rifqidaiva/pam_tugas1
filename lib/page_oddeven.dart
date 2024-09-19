@@ -28,38 +28,47 @@ class _PageOddevenState extends State<PageOddeven> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          TextField(
-            controller: controller,
-            keyboardType: TextInputType.number,
-            decoration: InputDecoration(
-              labelText: 'Masukkan bilangan',
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8.0),
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextField(
+              controller: controller,
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                labelText: 'Masukkan bilangan',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
               ),
             ),
-          ),
-          const SizedBox(height: 20),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8.0),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+              ),
+              onPressed: _checkGanjilGenap,
+              child: const Text(
+                'Cek',
+                style: TextStyle(
+                  color: Color.fromARGB(
+                      255, 0, 0, 0), // Sesuaikan warna teks menjadi amber
+                ),
               ),
             ),
-            onPressed: _checkGanjilGenap,
-            child: const Text('Cek'),
-          ),
-          const SizedBox(height: 20),
-          Text(
-            result,
-            style: Theme.of(context).textTheme.headlineMedium,
-          ),
-        ],
+            const SizedBox(height: 20),
+            Text(
+              result,
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+          ],
+        ),
       ),
     );
   }
