@@ -47,6 +47,7 @@ class _PageOddevenState extends State<PageOddeven> {
             const SizedBox(height: 20),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green.shade300,
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 shape: RoundedRectangleBorder(

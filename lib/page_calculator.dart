@@ -63,6 +63,7 @@ class _TamKurPageState extends State<TamKurPage> {
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue.shade200,
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0),
@@ -72,13 +73,13 @@ class _TamKurPageState extends State<TamKurPage> {
                   child: const Text(
                     'Penjumlahan',
                     style: TextStyle(
-                      color: Color.fromARGB(
-                          255, 0, 0, 0), // Sesuaikan warna teks menjadi amber
+                      color: Color.fromARGB(255, 0, 0, 0),
                     ),
                   ),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red.shade200,
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0),
@@ -88,8 +89,7 @@ class _TamKurPageState extends State<TamKurPage> {
                   child: const Text(
                     'Pengurangan',
                     style: TextStyle(
-                      color: Color.fromARGB(
-                          255, 0, 0, 0), // Sesuaikan warna teks menjadi amber
+                      color: Color.fromARGB(255, 0, 0, 0),
                     ),
                   ),
                 ),
